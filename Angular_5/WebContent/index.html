@@ -1,0 +1,24 @@
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="myController.js"></script>
+<body ng-app="myApp">
+	<div ng-controller="myControll">
+
+		<table border="1">
+			<thead>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>DOB</th>
+				<th>Country</th>
+			</thead>
+			<tr ng-repeat="person in  persons">
+				<td>{{person.fname}}</td>
+				<td>{{person.lastname}}</td>
+				<td>{{person.email}}</td>
+				<td>{{person.dob}}</td>
+				<td>{{person.country}}</td>
+			</tr>
+		</table>
+
+	</div>
+</body>

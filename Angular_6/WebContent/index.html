@@ -1,0 +1,14 @@
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="myController.js"></script>
+<body ng-app="myApp">
+	<div ng-controller="myControll">
+		<ul>
+			<li ng-repeat="contry in contries">
+			{{contry.countryName}}
+				<ul>
+					<li ng-repeat="state in contry.states">{{state.stateName}}</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>

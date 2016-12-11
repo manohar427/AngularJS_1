@@ -1,0 +1,25 @@
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="myController3.js"></script>
+<body ng-app="myApp">
+ 
+ 
+ 
+	<div ng-controller="myControll">
+	
+	
+		<table border="1">
+		   <thead>
+		      <th>Name</th>
+		      <th>alpha2_code</th>
+		      <th>alpha3_code</th>
+		   </thead>
+		 <!--   <tr ng-repeat="employee in employees|orderBy:'name'">--> 
+		<!-- <tr ng-repeat="employee in employees|orderBy:'salary':false">--> 
+		<tr ng-repeat="employee in employees">
+		     <td>{{employee.name}}</td>
+		     <td>{{employee.alpha2_code}}</td>
+		     <td>{{employee.alpha3_code}}</td>
+		   </tr>
+		</table>
+	</div>
+</body>

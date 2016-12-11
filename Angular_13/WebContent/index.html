@@ -1,0 +1,19 @@
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="myController.js"></script>
+<body ng-app="myApp">
+ 
+	<div ng-controller="myControll">
+		<table border="1">
+		   <thead>
+		      <th>Country</th>
+		      <th>Code 1</th>
+		      <th>Code 2</th>
+		   </thead>
+		   <tr ng-repeat="contry in contries">
+		     <td>{{contry.name}}</td>
+		     <td>{{contry.alpha2_code}}</td>
+		     <td>{{contry.alpha3_code}}</td>
+		   </tr>
+		</table>
+	</div>
+</body>

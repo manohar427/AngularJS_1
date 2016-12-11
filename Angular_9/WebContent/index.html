@@ -1,0 +1,24 @@
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="myController.js"></script>
+<body ng-app="myApp">
+ 
+ 
+ 
+	<div ng-controller="myControll">
+	
+		<table border="1">
+		   <thead>
+		      <th>Name</th>
+		      <th>Dob</th>
+		      <th>Gender</th>
+		      <th>Salary</th>
+		   </thead>
+		   <tr ng-repeat="employee in employees|orderBy:'-name'">
+		     <td>{{employee.name|uppercase}}</td>
+		     <td>{{employee.dob|date:"dd/MM/yyyy"}}</td>
+		     <td>{{employee.gender|lowercase}}</td>
+		     <td>{{employee.salary|number:3}}</td>
+		   </tr>
+		</table>
+	</div>
+</body>

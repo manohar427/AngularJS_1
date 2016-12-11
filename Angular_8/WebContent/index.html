@@ -1,0 +1,27 @@
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="myController.js"></script>
+<body ng-app="myApp">
+ 
+ 
+ 
+	<div ng-controller="myControll">
+		<table border="1">
+		   <thead>
+		      <th>Movie Name</th>
+		      <th>Like</th>
+		      <th>Dis Likes</th>
+		      <th>Avg Likes</th>
+		      <th>Like button</th>
+		      <th>DisLike button</th>
+		   </thead>
+		   <tr ng-repeat="movie in movies">
+		     <td>{{movie.movieName}}</td>
+		     <td>{{movie.like}}</td>
+		     <td>{{movie.dislike}}</td>
+		     <td>{{movie.like-movie.dislike}}</td>
+		     <td><input type="button" value="Like" ng-click="incrementLike(movie)"></td>
+		     <td><input type="button" value="DisLike" ng-click="incrementDisLike(movie)"></td>
+		   </tr>
+		</table>
+	</div>
+</body>
